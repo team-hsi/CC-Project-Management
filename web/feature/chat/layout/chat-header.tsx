@@ -1,3 +1,4 @@
+
 "use client";
 import { Search } from "lucide-react";
 import { Badge } from "@/feature/shared/ui/badge";
