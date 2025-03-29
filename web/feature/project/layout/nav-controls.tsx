@@ -43,3 +43,17 @@ export const NavigationControls = () => {
 //   );
 // }
 
+// function ReloadButton() {
+//   const router = useRouter();
+//   return (
+//     <Button
+//       onClick={() => router.refresh()}
+//       className="h-7 w-7 ml-2"
+//       variant="ghost"
+//       size="icon"
+//     >
+//       🔄
+//     </Button>
+//   );
+// }
+
