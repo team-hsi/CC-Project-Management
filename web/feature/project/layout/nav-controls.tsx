@@ -43,6 +43,8 @@ export const NavigationControls = () => {
 //   );
 // }
 
+//reload button adding
+
 // function ReloadButton() {
 //   const router = useRouter();
 //   return (
