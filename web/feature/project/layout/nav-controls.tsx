@@ -26,6 +26,9 @@ export const NavigationControls = () => {
   );
 };
 
+
+//go home button
+
 // function GoHomeButton() {
 //   const router = useRouter();
 //   return (
