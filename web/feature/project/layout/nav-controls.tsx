@@ -25,3 +25,18 @@ export const NavigationControls = () => {
     </div>
   );
 };
+
+// function GoHomeButton() {
+//   const router = useRouter();
+//   return (
+//     <Button
+//       onClick={() => router.push("/")}
+//       className="h-7 w-7 ml-2"
+//       variant="ghost"
+//       size="icon"
+//     >
+//       🏠
+//     </Button>
+//   );
+// }
+
