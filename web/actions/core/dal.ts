@@ -33,18 +33,6 @@ export const getSession = cache(async () => {
   return session;
 });
 
-// export const getActiveWS = cache(async () => {
-//   const cookie = (await cookies()).get(ACTIVE_WS)?.value;
-//   if (!cookie) {
-//     redirect("/select-workspace");
-//   }
-//   return cookie;
-// });
-
-// export const deleteActiveWS = async () => {
-//   const cookieStore = await cookies();
-//   cookieStore.delete(ACTIVE_WS);
-// };
 
 export const getUser = cache(async () => {
   const session = await getSession();
