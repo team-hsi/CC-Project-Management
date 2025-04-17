@@ -16,6 +16,11 @@ export const getAllUsers = async () => {
   }
 };
 
+/**
+ * Retrieves the current user's workspaces using session data, with caching and revalidation.
+ * Logs and rethrows a cleaned-up error if the request fails.
+ */
+
 export const getUserWorkspaces = async () => {
   try {
     const session = await getSession();
