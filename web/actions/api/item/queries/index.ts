@@ -31,6 +31,9 @@ export const getItemById = async (payload: Pick<ItemPayload, "id">) => {
   }
 };
 
+
+/* * Fetches items for a given project ID with caching and revalidation.
+ * Logs and rethrows a cleaned-up error if the request fails.*/
 export const getProjectItems = async (payload: Pick<ProjectPayload, "id">) => {
   try {
     return await get<Item[]>(`/v1/projects/${payload.id}/items`,{
