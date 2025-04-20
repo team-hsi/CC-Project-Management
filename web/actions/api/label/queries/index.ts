@@ -5,6 +5,11 @@ import { extractErrors } from "@/lib/utils";
 import { ProjectPayload } from "@/feature/shared/@types/projects";
 import { CACHE_LIFE, CACHE_TAGS } from "../../../core/cache-config";
 
+/**
+ * Fetches all labels from the server.
+ * Logs and rethrows a cleaned-up error if the request fails.
+ */
+
 export const getAllLabels = async () => {
   try {
     return await get<Label[]>(`/v1/labels/getAll`);
