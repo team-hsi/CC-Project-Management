@@ -1,24 +1,29 @@
 "use server";
+
 import { getSession } from "./dal";
 import { extractErrors } from "@/lib/utils";
 
+//get the API URL from environment variables
 const API = process.env.NEXT_PUBLIC_API_URL;
 type FetchOptions = {
   next?: {
     tags?: string[];
     revalidate?: false | 0 | number;
   };
+
   cache?: "no-store" | "force-cache";
 };
 
 const getHeaders = async () => {
   const session = await getSession();
   return {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json",    
     Authorization: `Bearer ${session.tokens.accessToken}`,
   };
 };
 
+// Function to handle the response from the API
+// It checks the response status and parses the JSON data if the response is OK.
 const handleResponse = async <T>(response: Response): Promise<T> => {
   if (response.status === 204) {
     return undefined as T;
