@@ -12,16 +12,23 @@ export type SessionPayload = {
   activeSpace: string | null;
   accessToken: string;
   refreshToken: string;
-  expiresAt: Date;
+  expiresAt: Date;  
 };
 
+/**
+ * Encrypts a session payload into a signed JWT using HS256 algorithm.
+ * Sets issued time and expiration to 59 minutes.
+ */
+
 export async function encrypt(payload: SessionPayload) {
-  return new SignJWT(payload)
-    .setProtectedHeader({ alg: "HS256" })
-    .setIssuedAt()
-    .setExpirationTime("59m")
+  return new SignJWT(payload) 
+    .setProtectedHeader({ alg: "HS256" }) 
+    .setIssuedAt() 
+    .setExpirationTime("59m") 
     .sign(encodedKey);
 }
+
+
 export async function decrypt(session: string | undefined = "") {
   try {
     const { payload } = await jwtVerify(session, encodedKey, {
