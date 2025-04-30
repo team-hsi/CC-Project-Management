@@ -37,6 +37,10 @@ export function ChatBubble({
   );
 }
 
+
+ /** ChatBubble wrapper that arranges message content depending on the message variant (sent or received).
+ * Reverses direction for sent messages to align user messages to the right.*/
+ 
 interface ChatBubbleMessageProps {
   variant?: "sent" | "received";
   isLoading?: boolean;
@@ -68,6 +72,10 @@ export function ChatBubbleMessage({
     </div>
   );
 }
+
+/** * ChatBubbleMessage displays the actual message content.
+ * Applies different styles based on whether the message was sent or received.
+ * Shows a loading indicator if `isLoading` is true.*/
 
 interface ChatBubbleAvatarProps {
   src?: string;
