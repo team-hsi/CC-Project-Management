@@ -13,7 +13,7 @@ This is a full-stack project management application that provides a unified plat
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**:
-  - **Client State**: Zustand for global state management
+  - **Client State**: Context Api with Zustand for global state management
   - **Server State**: TanStack Query for server state management and data fetching
   - **Context API**: For component-level state sharing
 - **Data Fetching**: TanStack Query
